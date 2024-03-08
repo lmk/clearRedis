@@ -29,7 +29,7 @@ func main() {
 	rdb.Ping(ctx)
 
 	err := rdb.ForEachMaster(ctx, func(ctx context.Context, rdb *redis.Client) error {
-		iter := rdb.Scan(ctx, 0, delKey, 0).Iterator()
+		iter := rdb.Scan(ctx, 0, delKey, 500).Iterator()
 
 		for iter.Next(ctx) {
 			fmt.Println(iter.Val())
