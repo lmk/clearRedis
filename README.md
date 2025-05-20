@@ -4,11 +4,13 @@ clear keys in redis cluster
 
 ```bash
 $ clearRedis -h
+Usage of ./clearRedis:
   -clear
         clear
   -hosts string
-        host list (default "127.0.0.1:6379;127.0.0.1:6380;127.0.0.1:6381;127.0.0.1:6382")
+        host list (default "210.217.178.152:6511;210.217.178.152:6512;210.217.178.153:6511;210.217.178.153:6512")
   -key string
-        key parttern (default "keys:*")
-
+        key parttern (default "SIDS_HIT:*")
+  -withValue
+        with value
 ```
